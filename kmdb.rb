@@ -212,6 +212,13 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output
 # TODO!
+nolan = Person.where({name: "Christopher Nolan"})[0]
+# movies = Movie.where({person_id: "nolan.id"})
+movies = nolan.movies
+for movie in movies
+    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{movie.person.name}"
+end
+
 
 # Prints a header for the cast output
 puts ""
