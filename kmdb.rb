@@ -140,10 +140,69 @@ values = { title: "The Dark Knight Rises", year_released: 2012, rated: "PG-13", 
 movie = Movie.new(values)
 movie.save
 
+values = { movie_id: 1, person_id: 2, character_name: "Bruce Wayne"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 1, person_id: 3, character_name: "Alfred"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 1, person_id: 4, character_name: "Ra's Al Ghul"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 1, person_id: 5, character_name: "Rachel Dawes"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 1, person_id: 6, character_name: "Commissioner Gordon"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 2, person_id: 2, character_name: "Bruce Wayne"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 2, person_id: 7, character_name: "Joker"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 2, person_id: 8, character_name: "Harvey Dent"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 2, person_id: 3, character_name: "Alfred"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 2, person_id: 9, character_name: "Rachel Dawes"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 3, person_id: 2, character_name: "Bruce Wayne"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 3, person_id: 6, character_name: "Commissioner Gordon"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 3, person_id: 10, character_name: "Bane"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 3, person_id: 11, character_name: "John Blake"}
+role = Role.new(values)
+role.save
+
+values = { movie_id: 3, person_id: 12, character_name: "Selina Kyle"}
+role = Role.new(values)
+role.save
+
 puts Movie.all.count
 puts Person.all.count
-
-
+puts Role.all.count
 
 
 # Prints a header for the movies output
