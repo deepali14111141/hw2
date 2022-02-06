@@ -69,6 +69,9 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model
 # TODO!
@@ -76,6 +79,72 @@
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+values = { name: "Christopher Nolan"}
+person = Person.new(values)
+person.save
+
+values = { name: "Christian Bale"}
+person = Person.new(values)
+person.save
+
+values = { name: "Michael Caine"}
+person = Person.new(values)
+person.save
+
+values = { name: "Liam Neeson"}
+person = Person.new(values)
+person.save
+
+values = { name: "Katie Holmes"}
+person = Person.new(values)
+person.save
+
+values = { name: "Gary Oldman"}
+person = Person.new(values)
+person.save
+
+values = { name: "Heath Ledger"}
+person = Person.new(values)
+person.save
+
+values = { name: "Aaron Eckhart"}
+person = Person.new(values)
+person.save
+
+values = { name: "Maggie Gyllenhaal"}
+person = Person.new(values)
+person.save
+
+values = { name: "Tom Hardy"}
+person = Person.new(values)
+person.save
+
+values = { name: "Joseph Gordon-Levitt"}
+person = Person.new(values)
+person.save
+
+values = { name: "Anne Hathaway"}
+person = Person.new(values)
+person.save
+
+values = { title: "Batman Begins", year_released: 2005, rated: "PG-13", person_id: 1}
+movie = Movie.new(values)
+movie.save
+
+values = { title: "The Dark Knight", year_released: 2008, rated: "PG-13", person_id: 1}
+movie = Movie.new(values)
+movie.save
+
+values = { title: "The Dark Knight Rises", year_released: 2012, rated: "PG-13", person_id: 1}
+movie = Movie.new(values)
+movie.save
+
+puts Movie.all.count
+puts Person.all.count
+
+
+
 
 # Prints a header for the movies output
 puts "Movies"
