@@ -200,9 +200,7 @@ values = { movie_id: dark_knight_rises.id, person_id: anne_hathaway.id, characte
 selina_kyle= Role.new(values)
 selina_kyle.save
 
-puts Movie.all.count
-puts Person.all.count
-puts Role.all.count
+
 
 
 # Prints a header for the movies output
@@ -227,3 +225,16 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+roles = Role.all
+people = Person.all
+for movie in movies
+    roles_in_movie = Role.where({movie_id: movie.id})
+    # puts "#{movie.title}"
+    for role in roles_in_movie
+        puts "#{movie.title} #{role.person.name} #{role.character_name}"
+    end
+end
+
+
+
