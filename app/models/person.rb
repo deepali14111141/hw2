@@ -1,5 +1,6 @@
 class Person < ApplicationRecord
-    def movies
-        Movie.where({person_id: read_attribute(:id})
-    end
+    has_many :movies
+    # def movies
+    #     Movie.where({person_id: id})
+    # end
 end
